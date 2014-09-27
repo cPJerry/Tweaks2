@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    0.1
+// @version    1.0
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
 // ==/UserScript==
 
