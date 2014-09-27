@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.2
-// @updateURL   https://github.com/cPJerry/Tweaks2/raw/master/AutoLogins.user.js?data=183562
-// @downloadURL https://github.com/cPJerry/Tweaks2/raw/master/AutoLogins.user.js?data=183562
+// @version    1.3
+// @updateURL   https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
+// @downloadURL https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=view&id=*
 // ==/UserScript==
