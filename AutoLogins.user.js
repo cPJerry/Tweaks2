@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.1
+// @version    1.2
 // @updateURL   https://github.com/cPJerry/Tweaks2/raw/master/AutoLogins.user.js?data=183562
 // @downloadURL https://github.com/cPJerry/Tweaks2/raw/master/AutoLogins.user.js?data=183562
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
+// @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=view&id=*
 // ==/UserScript==
 
 function str_replace(search, replace, subject, count) {
