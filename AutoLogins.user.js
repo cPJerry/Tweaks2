@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.4.4
+// @version    1.4.5
 // @updateURL   https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @downloadURL https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
@@ -65,7 +65,8 @@ var whmcsHost2 = whmcsHost;
 whmcsHost = str_replace("https://","",whmcsHost);
 whmcsHost = str_replace("/index.php","",whmcsHost);
 whmcsHost = str_replace("/login.php","",whmcsHost);
-
+whmcsHost = whmcsHost+"/dologin.php";
+whmcsHost = str_replace("//dologin.php","/dologin.php",whmcsHost);
 
 
 var proto = "http://";
@@ -80,5 +81,5 @@ if (cpanelHost == ".HTACCESS") {
     whmcsHost = proto+whmcsHost;
 }
 
-var loginWhmcs = "<form target='_blank' style='"+style+"' name='whmcsform' action='"+whmcsHost+"/dologin.php' method='post'><input type='hidden' name='username' value='"+whmcsUser+"'><input type='hidden' name='password' value='"+whmcsPass+"'><input type='submit' value='Login to WHMCS'></form>ABC";
+var loginWhmcs = "<form target='_blank' style='"+style+"' name='whmcsform' action='"+whmcsHost+"' method='post'><input type='hidden' name='username' value='"+whmcsUser+"'><input type='hidden' name='password' value='"+whmcsPass+"'><input type='submit' value='Login to WHMCS'></form>ABC";
 $(loginWhmcs).appendTo(insertAt);
