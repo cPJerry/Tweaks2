@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.3
+// @version    1.4
 // @updateURL   https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @downloadURL https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
@@ -49,6 +49,8 @@ var cpanelHost = $('#customfield158').attr('value');
 cpanelHost = str_replace("https://","",cpanelHost);
 var insertAt = $('body').find('#customfield134').parent().parent().parent().parent().parent().find('div');
 cpanelHost = str_replace("http://","",cpanelHost);
+cpanelHost = str_replace(":2082","",cpanelHost);
+cpanelHost = str_replace(":2083","",cpanelHost);
 cpanelHost = cpanelHost.replace(/\/(.*)/g,"");
 var logincPanel = "<form style='"+style+"' target='_blank' name='cpanelform' action='https://"+cpanelHost+":2083/login' method='post'><input type='hidden' name='user' value='"+cpanelUser+"'><input type='hidden' name='pass' value='"+cpanelPass+"'><input type='submit' value='Login to cPanel'></form>ABC";
 $(logincPanel).appendTo(insertAt);
