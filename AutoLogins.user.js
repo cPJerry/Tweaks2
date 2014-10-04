@@ -63,16 +63,17 @@ var whmcsHost = $('#customfield134').attr('value');
 var whmcsHost2 = whmcsHost;
 
 whmcsHost = str_replace("https://","",whmcsHost);
+var proto = "http://";
+if (whmcsHost != whmcsHost2) {
+    proto = "https://";
+}
 whmcsHost = str_replace("/index.php","",whmcsHost);
 whmcsHost = str_replace("/login.php","",whmcsHost);
 whmcsHost = whmcsHost+"/dologin.php";
 whmcsHost = str_replace("//dologin.php","/dologin.php",whmcsHost);
 
 
-var proto = "http://";
-if (whmcsHost != whmcsHost2) {
-    proto = "https://";
-}
+
 whmcsHost = str_replace("http://","",whmcsHost);
 
 if (cpanelHost == ".HTACCESS") {
