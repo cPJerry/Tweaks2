@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.4.3
+// @version    1.4.4
 // @updateURL   https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @downloadURL https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
@@ -66,7 +66,6 @@ whmcsHost = str_replace("https://","",whmcsHost);
 whmcsHost = str_replace("/index.php","",whmcsHost);
 whmcsHost = str_replace("/login.php","",whmcsHost);
 
-whmcsHost = whmcsHost.replace(/\/(.*)/g,"");
 
 
 var proto = "http://";
