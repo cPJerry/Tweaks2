@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.4
+// @version    1.4.1
 // @updateURL   https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @downloadURL https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
@@ -42,16 +42,18 @@ function str_replace(search, replace, subject, count) {
   return sa ? s : s[0];
 }
 var style = "display:inline;";
+var insertAt = $('body').find('#customfield134').parent().parent().parent().parent().parent().find('div');
 
 var cpanelPass = $('#customfield166').attr('value');
 var cpanelUser = $('#customfield162').attr('value');
 var cpanelHost = $('#customfield158').attr('value');
+
 cpanelHost = str_replace("https://","",cpanelHost);
-var insertAt = $('body').find('#customfield134').parent().parent().parent().parent().parent().find('div');
 cpanelHost = str_replace("http://","",cpanelHost);
 cpanelHost = str_replace(":2082","",cpanelHost);
 cpanelHost = str_replace(":2083","",cpanelHost);
 cpanelHost = cpanelHost.replace(/\/(.*)/g,"");
+
 var logincPanel = "<form style='"+style+"' target='_blank' name='cpanelform' action='https://"+cpanelHost+":2083/login' method='post'><input type='hidden' name='user' value='"+cpanelUser+"'><input type='hidden' name='pass' value='"+cpanelPass+"'><input type='submit' value='Login to cPanel'></form>ABC";
 $(logincPanel).appendTo(insertAt);
 var https = 0;
