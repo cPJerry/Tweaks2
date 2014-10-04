@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.4.2
+// @version    1.4.3
 // @updateURL   https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @downloadURL https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
@@ -61,7 +61,13 @@ var whmcsPass = $('#customfield142').attr('value');
 var whmcsUser = $('#customfield138').attr('value');
 var whmcsHost = $('#customfield134').attr('value');
 var whmcsHost2 = whmcsHost;
+
 whmcsHost = str_replace("https://","",whmcsHost);
+whmcsHost = str_replace("/index.php","",whmcsHost);
+whmcsHost = str_replace("/login.php","",whmcsHost);
+whmcsHost = whmcsHost.replace(/\/(.*)/g,"");
+
+
 var proto = "http://";
 if (whmcsHost != whmcsHost2) {
     proto = "https://";
