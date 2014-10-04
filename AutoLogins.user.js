@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.4.5
+// @version    1.4.6
 // @updateURL   https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @downloadURL https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
