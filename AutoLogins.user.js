@@ -65,6 +65,7 @@ var whmcsHost2 = whmcsHost;
 whmcsHost = str_replace("https://","",whmcsHost);
 whmcsHost = str_replace("/index.php","",whmcsHost);
 whmcsHost = str_replace("/login.php","",whmcsHost);
+
 whmcsHost = whmcsHost.replace(/\/(.*)/g,"");
 
 
