@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Auto Logins
-// @version    1.4.1
+// @version    1.4.2
 // @updateURL   https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @downloadURL https://raw.githubusercontent.com/cPJerry/Tweaks2/master/AutoLogins.user.js
 // @match      https://staff.whmcs.com/members/admin/supporttickets.php?action=viewticket&id=*
@@ -74,5 +74,5 @@ if (cpanelHost == ".HTACCESS") {
     whmcsHost = proto+whmcsHost;
 }
 
-var logincPanel = "<form target='_blank' style='"+style+"' name='cpanelform' action='"+whmcsHost+"/dologin.php' method='post'><input type='hidden' name='username' value='"+whmcsUser+"'><input type='hidden' name='password' value='"+whmcsPass+"'><input type='submit' value='Login to WHMCS'></form>ABC";
-$(logincPanel).appendTo(insertAt);
+var loginWhmcs = "<form target='_blank' style='"+style+"' name='whmcsform' action='"+whmcsHost+"/dologin.php' method='post'><input type='hidden' name='username' value='"+whmcsUser+"'><input type='hidden' name='password' value='"+whmcsPass+"'><input type='submit' value='Login to WHMCS'></form>ABC";
+$(loginWhmcs).appendTo(insertAt);
