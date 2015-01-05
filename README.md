@@ -30,3 +30,5 @@ InTicketTweaks.user.js: This changes the colors inside the ticket
 TicketTweaks.user.js: This does a mirad of things, but most importantly it makes it easy to see if a ticket needs attention
 
 loginasclient.user.js: This is a goodie. This makes login as client actually work for our WHMCS url!
+
+NewDownloadLinks.user.js: DO NOT install this without before contacting me. This requires a specialized system
