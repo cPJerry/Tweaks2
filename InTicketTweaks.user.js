@@ -17,3 +17,21 @@ $(".ticketlastreply").html($(".ticketlastreply").html() + " >> <a style=\"color:
 $('.message br').remove();
 $('.message').css('white-space','pre');
 $('.message').css('overflow-wrap','break-word');
+$('textarea').focus(function() {
+    $(this).css('background-color','#F2E3E3');
+});
+$('textarea').blur(function() {
+    $(this).css('background-color','#ffffff');
+});
+$('input').focus(function() {
+    if ($(this).attr('type') == "text") {
+        $(this).attr('size','150');
+        $(this).css('background-color','#F2E3E3');
+    }
+});
+$('input').blur(function() {
+    if ($(this).attr('type') == "text") {
+        $(this).attr('size','30');
+        $(this).css('background-color','#ffffff');
+    }
+});
